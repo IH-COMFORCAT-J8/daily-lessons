@@ -91,7 +91,8 @@ public class Main {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] %2 == 0) {
-                result[counter++] = array[i];
+                result[counter] = array[i];
+                counter = counter +1;
             }
 
         }
