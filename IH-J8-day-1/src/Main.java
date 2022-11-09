@@ -15,7 +15,11 @@ public class Main {
         Comentario en bloque
         Sigo comentando
 
+
+
          */
+
+        findSmallest(new int[]{1, 3, 2, 4, 5, 7});
         String myString = "Hello!";
         double suma = suma(20.50, 50.590);
 
@@ -68,6 +72,7 @@ public class Main {
             System.out.println("No se llama Jaume");
         }
 
+
         if (x == 0) {
             System.out.println("X vale 0");
         } else if (x == 1) {
@@ -114,6 +119,25 @@ public class Main {
     }
     public static double suma(double num1, double num2) {
         return num1 + num2;
+    }
+
+    public static void findSmallest(int[] numbers) {
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        for (int number : numbers) {
+            if (number < smallest) {
+                secondSmallest = smallest;
+                smallest = number;
+            } else if (number < secondSmallest) {
+                secondSmallest = number;
+
+            }
+        }
+
+        System.out.println("Smallest: " + smallest);
+        System.out.println("Second Smallest: " + secondSmallest);
+
     }
 
 }

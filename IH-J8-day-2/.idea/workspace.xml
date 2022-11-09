@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="299b5e1f-2a31-4175-b918-3e20bb3234f5" name="Changes" comment="" />
+    <list default="true" id="299b5e1f-2a31-4175-b918-3e20bb3234f5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../IH-J8-day-1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IH-J8-day-1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IH-J8-day-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IH-J8-day-1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IH-J8-day-1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IH-J8-day-1/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,14 +23,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -35,7 +39,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667895135298</updated>
-      <workItem from="1667895136440" duration="7650000" />
+      <workItem from="1667895136440" duration="7957000" />
+      <workItem from="1667907553034" duration="39000" />
+      <workItem from="1667907683537" duration="28000" />
+      <workItem from="1667919643742" duration="598000" />
+      <workItem from="1667981495962" duration="91000" />
     </task>
     <servers />
   </component>

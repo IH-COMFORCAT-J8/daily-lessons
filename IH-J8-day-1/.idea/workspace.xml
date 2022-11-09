@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65dfbd6c-2085-4b4f-9deb-4facc97d44ec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IH-J8-day-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IH-J8-day-2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -66,6 +66,9 @@
       <updated>1667816092850</updated>
       <workItem from="1667816096273" duration="6611000" />
       <workItem from="1667895058145" duration="3000" />
+      <workItem from="1667907574685" duration="18000" />
+      <workItem from="1667907683153" duration="29000" />
+      <workItem from="1667919643499" duration="2633000" />
     </task>
     <servers />
   </component>
