@@ -19,7 +19,7 @@ public class Main {
             System.err.println("Edad no válida, por favor introduce una edad dentro del rango:");
             age = input.nextInt();
         }
-         */
+
 
         Scanner input = new Scanner(System.in);
 
@@ -54,6 +54,57 @@ public class Main {
         }
 
         reader.close();
+
+         */
+
+
+        /*
+        Scanner reader = new Scanner(new File("oscar_age_female.csv"));
+
+        FileWriter writer = new FileWriter("result.txt", true);
+        Name: Janet Gaynor
+        Year: 1928
+        Age: 22
+        Movie: Seventh Heaven Street Angel and Sunrise: A Song of Two Humans
+
+
+        String firstLine = reader.nextLine();
+        System.out.println("Saltándonos la primera linea: \n " + firstLine);
+        while (reader.hasNextLine()) {
+            String[] line = reader.nextLine().split(", ");
+            writer.write("Name: " + line[3] + "\n");
+            writer.write("Year: " + line[1] + "\n");
+            writer.write("Age: " + line[2] + "\n");
+            writer.write("Movie: " + line[4] + "\n");
+            writer.write("================== \n");
+
+        }
+
+
+        reader.close();
+        writer.close();
+
+         */
+
+        Car myCar = new Car( -10, "Toyota", "Yaris", "2568JDF", true);
+
+        Car myOtherCar = new Car("Ford", "Fiesta");
+
+        System.out.println(myCar.getBrand());
+
+        myCar.setBrand("Lexus");
+
+        System.out.println(myCar.getBrand());
+
+        myCar.travel(150);
+        myCar.travel(10);
+        myCar.travel();
+
+
+
+
+
+
 
 
     }
