@@ -86,25 +86,41 @@ public class Main {
 
          */
 
-        Car myCar = new Car( -10, "Toyota", "Yaris", "2568JDF", true);
+        Course course = new Course();
 
-        Car myOtherCar = new Car("Ford", "Fiesta");
+        Vehicle v1 = new Vehicle(4, "Ford", "Fiesta", "34443ELF");
+        Vehicle v2 = new Vehicle(4, "Toyota", "Yaris", "34743ELF");
+        Car car1 = new Car("Ford", "Focus", "45678LJF", true, false);
 
-        System.out.println(myCar.getBrand());
+        Motorbike motorbike1 = new Motorbike("Yamaha", "605FL", "234234LFF", true, false);
 
-        myCar.setBrand("Lexus");
+        System.out.println(v1.getId());
+        System.out.println(v2.getId());
 
-        System.out.println(myCar.getBrand());
+        Vehicle v3 = Vehicle.cloneVehicle(v1);
+        System.out.println(v3.getId());
+        System.out.println(car1.getId());
+        System.out.println(motorbike1.getId());
 
-        myCar.travel(150);
-        myCar.travel(10);
-        myCar.travel();
+        String[] strings = {"pepe", "antonia", 1};
+
+        ArrayList<Car> cars = new ArrayList<>();
+        cars.add(car1);
+        //cars.add(v3);
+
+        ArrayList<Vehicle> vehicles = new ArrayList<>();
+        vehicles.add(motorbike1);
+        vehicles.add(car1);
 
 
+        for (Vehicle v: vehicles) {
+
+            if(v instanceof Car) {
+                System.out.println(((Car) v).isOffRoad());
+            }
 
 
-
-
+        }
 
 
     }
