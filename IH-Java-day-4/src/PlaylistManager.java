@@ -6,11 +6,11 @@ public class PlaylistManager {
         this.playable = playable;
     }
 
-    public WebPlayer getWebPlayer() {
-        return webPlayer;
+    public Playable getWebPlayer() {
+        return playable;
     }
 
-    public void setWebPlayer(WebPlayer webPlayer) {
-        this.webPlayer = webPlayer;
+    public void setWebPlayer(Playable playable) {
+        this.playable = playable;
     }
 }
