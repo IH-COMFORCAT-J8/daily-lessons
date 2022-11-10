@@ -84,7 +84,7 @@ public class Main {
         reader.close();
         writer.close();
 
-         */
+
 
         Course course = new Course();
 
@@ -145,6 +145,24 @@ public class Main {
 
         }
         System.out.println("Número de palabras que empiezan por vocal: " + counter);
+
+
+         */
+
+        Employee employee = new Employee("Jaume", "Sánchez", "13/01/1989", "IT", 50000);
+
+        Intern intern1 = new Intern("Alejandro", "Apellido", "20/10/1984", "IT", 15000, 12);
+
+        Intern intern2 = new Intern("Jose", "Apellido", "20/10/1995", "IT", 40000, 12);
+
+
+        FileWriter writer = new FileWriter(new File("employees.txt"), false);
+
+        writer.write(employee + "\n");
+        writer.write(intern1+ "\n");
+        writer.write(intern2 + "\n");
+
+        writer.close();
 
     }
 
