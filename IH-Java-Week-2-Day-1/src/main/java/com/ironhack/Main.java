@@ -31,5 +31,22 @@ public class Main {
         System.out.println("Json to object");
         System.out.println(invoice1);
 
+        Book book1 = new Book("Harry Potter y la piedra filosofal", 370);
+        Book book2 = new Book("El Resplandor", 430);
+        Book book3 = new Book("El Señor de los Anillos", 410);
+
+        List<Book> books = new Vector<>();
+
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+
+        Author author = new Author("Stephen", "King", books);
+
+        System.out.println(gson.toJson(author));
+        
+        double result = MathTools.sum(20, 30);
+        System.out.println(result);
+
     }
 }

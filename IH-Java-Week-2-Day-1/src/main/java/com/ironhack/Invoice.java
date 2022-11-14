@@ -56,4 +56,8 @@ public class Invoice {
                 ", invoiceItems=" + invoiceItems +
                 '}';
     }
+    
+    void addInvoiceItem(InvoiceItem invoiceItem) {
+        invoiceItems.add(invoiceItem);
+    }
 }
