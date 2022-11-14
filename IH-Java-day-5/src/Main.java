@@ -12,6 +12,7 @@ public class Main {
 
         IntArrayList intArrayList = new IntArrayList();
 
+
         for (int i = 1; i < 27; i++) {
             intArrayList.add(i);
 
