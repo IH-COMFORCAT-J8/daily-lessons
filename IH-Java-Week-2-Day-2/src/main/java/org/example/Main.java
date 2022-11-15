@@ -5,6 +5,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+/*
 
         int[] numbers = {1, 2, 3};
 
@@ -45,7 +46,48 @@ public class Main {
 
         System.out.println("Tienes " + ageInDays + " días de edad");
 
+ */
 
+        try {
+            System.out.println(concatenateName("Jaume", null));
+        } catch (IllegalArgumentException exception) {
+            System.out.println(exception.getMessage());
+        }
+
+        System.out.println("Adios");
+
+        int product = 0;
+        long longProduct = 0;
+
+        try {
+            product = MathLibrary.multiply(Integer.MAX_VALUE, 2);
+        } catch (IllegalArgumentException e) {
+            longProduct = MathLibrary.multiply((long)Integer.MAX_VALUE, 2l);
+        }
+
+        if (product != 0) {
+            System.out.println("Int: " + product);
+        } else {
+            System.out.println("Long: " + longProduct);
+        }
+
+        System.out.println(Integer.MAX_VALUE);
+       // System.out.println(MathLibrary.multiply(Integer.MAX_VALUE, 2));
+
+        Book book1 = new Book(12341203812309l, "El Resplandor", "Stephen King", 1979);
+        Book book2 = new Book(12341203812309l, "El Resplandor", "Stephen King", 1980);
+
+        System.out.println(book1.hashCode() == book2.hashCode());
+
+
+    }
+    public static String concatenateName(String name, String surname) throws IllegalArgumentException {
+
+        if (name == null || surname == null || name.isEmpty() || surname.isEmpty()) {
+            throw new IllegalArgumentException("El nombre y el apellido deben ser válidos");
+        }
+
+        return name + " " + surname;
     }
 
     private static int convertToDays(int result) {
