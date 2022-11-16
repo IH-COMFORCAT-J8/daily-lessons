@@ -7,4 +7,6 @@
 | 9 noviembre (tarde) | Programación oriengada a objetos  II | https://ironhack.zoom.us/rec/share/_sWxDVCs3uQmj6teBwzHQOpwJ1zwj9Uk9BP8E5LiRnbmVjcNPaA9L4kEgVopOvmq.wv3ZDNsa3MJZOjkl |
 | 10 noviembre        | Interfaces y clases abstractas       | https://ironhack.zoom.us/rec/share/egqTIDxes2Ec_fgIMdPFK2jwQsaX_bwWPnd6ivi4UFqCCZK-LUPs6REv059l9kN6.2thHm2wTtnwUk2_M |
 | 14 noviembre        | JSON, Maven y testing                | https://ironhack.zoom.us/rec/share/syjfOfjzqJzJ2EZM5M5Em9WzFO2mLspQxP8t1krt3T7Jxu8jG-P_a7cn4r1vku_2.W_XdDGIHFD6djQz3 |
+| 15 noviembre        | Excepciones y testing                | https://ironhack.zoom.us/rec/share/nDedw0agLrjMr80hmscnSZlU4zGOAhFhP_exrMlZU2ttzF8-EX4wqjwCJ8FP4QAb.KDTx9l6OsMBEMh6T |
+|                     |                                      |                                                              |
 

@@ -27,7 +27,6 @@ public class Main {
             switch (selection) {
                 case 1:
                     createNewStudent(students);
-
                     break;
                 case 2:
                     addScoreToStudent();
@@ -41,7 +40,6 @@ public class Main {
                 case 5:
                     showAllPassedStudents();
                     break;
-
                 case 6:
                     System.out.println("Hasta pronto!!!");
                     isRunning = false;
