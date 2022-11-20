@@ -5,11 +5,20 @@ public class User {
     private long id;
     private String name;
     private Status status;
+    private String address;
 
     public User(long id, String name, Status status) {
         this.id = id;
         this.name = name;
         setStatus(status);
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public long getId() {

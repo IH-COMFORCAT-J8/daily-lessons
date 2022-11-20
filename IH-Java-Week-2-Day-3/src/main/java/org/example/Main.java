@@ -1,5 +1,6 @@
 package org.example;
 
+import java.text.*;
 import java.util.*;
 
 public class Main {
@@ -55,6 +56,9 @@ public class Main {
             System.out.println("El país " + k + " está presidido por " + v);
         });
 
+        List<String> p = new ArrayList<>();
+        p.forEach(System.out::println);
+
 
 
         System.out.println("Extrayendo un valor dada su clave");
@@ -70,9 +74,20 @@ public class Main {
 
         Country country = countries.get("Spain");
 
+        User us1 = new User(1, "Rosi", Status.ONLINE);
+
+        System.out.println(us1.getName());
+
+        System.out.println(us1.getAddress());
+
+        us1.setAddress("Calle Maravillas, Barcelona");
+
+        System.out.println(us1.getAddress());
 
 
 
 
     }
+
+
 }
