@@ -53,6 +53,24 @@ INSERT INTO grade(student_name, course_code, grade) VALUES
 ('Helena Sepulvida', 'CS103-A', 72);
 
 
-
+-- select
+ 
+ select * from grade;
+ select count(*) from grade;
+ 
+ -- Mostrar el número de notas que tenemos por sección
+ select course_code, count(*) from grade group by course_code;
+ 
+ -- Mostrar la nota media por sección
+ select course_code, avg(grade) from grade group by course_code;
+ 
+ -- sumar todas las notas por course_code
+ select course_code, sum(grade) from grade group by course_code;
+ 
+ -- extraer la nota máxima y mínima de cada course_code
+ select course_code, max(grade) from grade group by course_code;
+ 
+ select course_code, min(grade) from grade group by course_code;
+ 
 
 
