@@ -72,5 +72,51 @@ INSERT INTO grade(student_name, course_code, grade) VALUES
  
  select course_code, min(grade) from grade group by course_code;
  
+ 
+ -- LIKE
+ 
+select * from grade where course_code like "CS101%";
+select * from grade where course_code like "%-A";
+select * from grade where course_code like "%101%";
+
+select * from grade where grade > 50 and grade <= 72;
+-- esto equivale
+select * from grade where grade between 50 and 72;
+
+-- podemos mezclar
+select * from grade where student_name LIKE "M%" or grade > 95;
+
+select distinct student_name from grade;
+
+ -- the average grade by student.
+ 
+ select student_name, avg(grade) from grade group by student_name;
+ 
+ -- the total number of courses taken by each student
+ 
+ select student_name, count(course_code) from grade group by student_name;
+ 
+ -- the minimum grade by section
+ 
+ select course_code, min(grade) from grade group by course_code; 
+ 
+ -- the maximum grade by section
+ 
+ select course_code, max(grade) from grade group by course_code;
+ 
+ -- the total number of courses taken by a student who has more than 1 course taken
+ 
+ select student_name, count(course_code) from grade group by student_name having count(course_code) > 1;
+ 
+ -- student name and score for all CS103 sections sorted by the score from highest to lowest.
+ 
+ select student_name, grade from grade where course_code like "CS103%" order by grade desc;
+ 
+ -- an alphabetical list of distinct students whose first names fall alphabetically from L to R
+ select distinct student_name from grade where student_name between 'L' and 'R' order by student_name asc;
+ 
+ 
+ select * from grade;
+
 
 
