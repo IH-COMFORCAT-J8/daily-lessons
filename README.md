@@ -9,4 +9,5 @@
 | 14 noviembre        | JSON, Maven y testing                | https://ironhack.zoom.us/rec/share/syjfOfjzqJzJ2EZM5M5Em9WzFO2mLspQxP8t1krt3T7Jxu8jG-P_a7cn4r1vku_2.W_XdDGIHFD6djQz3 |
 | 15 noviembre        | Excepciones y testing                | https://ironhack.zoom.us/rec/share/nDedw0agLrjMr80hmscnSZlU4zGOAhFhP_exrMlZU2ttzF8-EX4wqjwCJ8FP4QAb.KDTx9l6OsMBEMh6T |
 | 16 noviembre        | Enums, hashmaps y diagramas          | https://ironhack.zoom.us/rec/share/LpOrsWIvaSuYD4hxzjLkLfSrdG3h-wMtr7gVy7ipmhw7lRiejwU2HZZioldjvMWg.7HPFy1Dlaln350hF |
+| 21 noviembre        | SQL queries                          | https://ironhack.zoom.us/rec/share/CFDJnz3dPwENzcuZVVTmBPygRpu8ckLR3_jZ_Mz2P-RxbiSJcLVpBNSVvXWYVXp2.8obpu1BdeijCZpd7 |
 
