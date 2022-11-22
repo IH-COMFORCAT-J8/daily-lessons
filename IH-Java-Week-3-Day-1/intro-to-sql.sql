@@ -118,5 +118,17 @@ select distinct student_name from grade;
  
  select * from grade;
 
+-- Joins 
+
+select s.course_code, s.room_number, c.course_name, s.professor 
+from section s join course c on s.course_code = c.course_id;
+
+-- Join de más de una tabla
+
+use students;
+select g.student_name, g.grade, c.course_name, s.professor 
+from grade g join section s on g.course_code = s.section_id join course c on s.course_code = c.course_id;
+
+
 
 
