@@ -1,0 +1,3 @@
+[submodule "lesson-code-java-api-demo"]
+	path = lesson-code-java-api-demo
+	url = https://github.com/ironhack-labs/lesson-code-java-api-demo
