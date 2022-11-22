@@ -129,6 +129,14 @@ use students;
 select g.student_name, g.grade, c.course_name, s.professor 
 from grade g join section s on g.course_code = s.section_id join course c on s.course_code = c.course_id;
 
+-- solucion ejercicio joins
+
+select g.student_name, g.grade 
+from grade g 
+join section s on g.course_code = s.section_id 
+join course c on s.course_code = c.course_id 
+where c.course_name = 'Databases';
+
 
 
 
