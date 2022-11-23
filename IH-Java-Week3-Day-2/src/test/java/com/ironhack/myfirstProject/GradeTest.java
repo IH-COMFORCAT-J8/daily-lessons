@@ -36,8 +36,7 @@ public class GradeTest {
     }
 
     @AfterEach
-    void tearDown() {
-        gradeRepository.deleteAll();
+    void tearDown() {gradeRepository.deleteAll();
     }
 
     @Test
@@ -58,6 +57,19 @@ public class GradeTest {
         Double averageLastSection = (Double) averageBySection.get(2)[1];
 
         assertEquals(80.5, averageLastSection);
+
+
+    }
+
+    @Test
+    void shouldReturnAverageGradeBySectionByNumStudents_whenMethodCalled() {
+        List<Object[]> averageBySection = gradeRepository.findAverageBySectionHavingMoreThan(2l);
+
+        assertEquals(2, averageBySection.size());
+
+        averageBySection = gradeRepository.findAverageBySectionHavingMoreThan(1l);
+        assertEquals(3, averageBySection.size());
+
 
 
     }
