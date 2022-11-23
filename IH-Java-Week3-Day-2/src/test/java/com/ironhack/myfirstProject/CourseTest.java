@@ -19,9 +19,17 @@ public class CourseTest {
     Course course;
     Course course2;
     Course course3;
+    @Autowired
+    StudentRepository studentRepository;
+
+    Student student;
+
 
     @BeforeEach
     void setUp() {
+        student = studentRepository.save(new Student("Roberto", "Vetere"));
+        student.getId();
+
         course = new Course("CS101", "Introduction to Spring");
         courseRepository.save(course);
         course2 = new Course("CS103", "Java Structures");
@@ -52,8 +60,8 @@ public class CourseTest {
         List<Course> courses = courseRepository.findAll();
 
         assertEquals(1, courseRepository.findAll().size());
-       // Course c1 = courseRepository.findById("CS101").get();
-       assertTrue(courseRepository.findById("CS101").isPresent());
+        // Course c1 = courseRepository.findById("CS101").get();
+        assertTrue(courseRepository.findById("CS101").isPresent());
 
         /*
         Optional<Course> c1 = courseRepository.findById("CS101");
@@ -66,5 +74,6 @@ public class CourseTest {
          */
 
     }
+
 
 }
