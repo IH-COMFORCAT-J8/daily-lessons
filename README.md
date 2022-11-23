@@ -10,4 +10,5 @@
 | 15 noviembre        | Excepciones y testing                | https://ironhack.zoom.us/rec/share/nDedw0agLrjMr80hmscnSZlU4zGOAhFhP_exrMlZU2ttzF8-EX4wqjwCJ8FP4QAb.KDTx9l6OsMBEMh6T |
 | 16 noviembre        | Enums, hashmaps y diagramas          | https://ironhack.zoom.us/rec/share/LpOrsWIvaSuYD4hxzjLkLfSrdG3h-wMtr7gVy7ipmhw7lRiejwU2HZZioldjvMWg.7HPFy1Dlaln350hF |
 | 21 noviembre        | SQL queries                          | https://ironhack.zoom.us/rec/share/CFDJnz3dPwENzcuZVVTmBPygRpu8ckLR3_jZ_Mz2P-RxbiSJcLVpBNSVvXWYVXp2.8obpu1BdeijCZpd7 |
+| 22 noviembre        | SpringBoot y Jpa Intro               | https://ironhack.zoom.us/rec/share/yOJ91si9fZ3FWP_2CuVzxao0RiVS46PmIQsyAYSHhet8TfFwD4o1t2EPtcm9ZfGW.qWDmj628MKk3t33R |
 
