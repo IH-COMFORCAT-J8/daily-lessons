@@ -17,8 +17,11 @@ public interface GradeRepository extends JpaRepository<Grade, Integer> {
 
     //Podemos utilizar argumentos posicionales ?1 para el primer arg, ?2 para el segundo...
     //Podemos utilizar argumentos nominales con el uso de :nombreDelArgumento
-    @Query("SELECT sectionId, AVG (score) from Grade group by sectionId having count(*) > :numStudents order by sectionId")
+    @Query("SELECT g.sectionId, AVG (g.score) from Grade g group by g.sectionId having count(g) > :numStudents order by g.sectionId")
     List<Object[]> findAverageBySectionHavingMoreThan(Long numStudents);
+
+    @Query(value = "select section_id, avg(score) from grade group by section_id having count(*) > :numStudents order by section_id;", nativeQuery = true)
+    List<Object[]> findAverageBySectionHavingMoreThanV2(Long numStudents);
 
 
     /*
