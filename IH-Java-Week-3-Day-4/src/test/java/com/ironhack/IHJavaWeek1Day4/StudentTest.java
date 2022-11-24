@@ -55,9 +55,9 @@ public class StudentTest {
 
     @AfterEach
     void tearDown() {
-       // labRepository.deleteAll();
-       // assignmentRepository.deleteAll();
-       // studentRepository.deleteAll();
+        labRepository.deleteAll();
+        assignmentRepository.deleteAll();
+        studentRepository.deleteAll();
     }
 
     @Test
