@@ -11,4 +11,5 @@
 | 16 noviembre        | Enums, hashmaps y diagramas          | https://ironhack.zoom.us/rec/share/LpOrsWIvaSuYD4hxzjLkLfSrdG3h-wMtr7gVy7ipmhw7lRiejwU2HZZioldjvMWg.7HPFy1Dlaln350hF |
 | 21 noviembre        | SQL queries                          | https://ironhack.zoom.us/rec/share/CFDJnz3dPwENzcuZVVTmBPygRpu8ckLR3_jZ_Mz2P-RxbiSJcLVpBNSVvXWYVXp2.8obpu1BdeijCZpd7 |
 | 22 noviembre        | SpringBoot y Jpa Intro               | https://ironhack.zoom.us/rec/share/yOJ91si9fZ3FWP_2CuVzxao0RiVS46PmIQsyAYSHhet8TfFwD4o1t2EPtcm9ZfGW.qWDmj628MKk3t33R |
+| 23 Noviembre        | Herencia                             | https://ironhack.zoom.us/rec/share/K0qylVjbkogHmw3PzBy5cdXObvBFWBT252ktMhS1eDQHBbJiMhR_W63vDME7JpY.bLMTrpSL5MS2GpY0 |
 
