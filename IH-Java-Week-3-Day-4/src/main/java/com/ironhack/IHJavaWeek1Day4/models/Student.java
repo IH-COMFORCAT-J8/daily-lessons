@@ -3,6 +3,7 @@ package com.ironhack.IHJavaWeek1Day4.models;
 import com.ironhack.IHJavaWeek1Day4.models.embedded.*;
 
 import javax.persistence.*;
+import java.util.*;
 
 @Entity
 public class Student {
@@ -22,6 +23,14 @@ public class Student {
             @AttributeOverride(name = "country", column = @Column(name = "physical_country"))
     })
     private Address physicalAddress;
+    @OneToOne(mappedBy = "student")
+    private FinalAssignment finalAssignment;
+
+    /*
+    Por defecto, para evitar un consumo de memoria excesiva, al llamar a un objeto de tipo Student de la base de datos no traerá todos sus laboratorios. Esto podemos solucionarlo o bien creándonos un método en el repositorio labs o cambiando el fetch a EAGER
+     */
+    @OneToMany(mappedBy = "student", fetch = FetchType.EAGER)
+    List<Lab> labs;
 
     public Student() {
 
@@ -72,5 +81,29 @@ public class Student {
 
     public void setPostalAddress(Address postalAddress) {
         this.postalAddress = postalAddress;
+    }
+
+    public FinalAssignment getAssignment() {
+        return finalAssignment;
+    }
+
+    public void setAssignment(FinalAssignment finalAssignment) {
+        this.finalAssignment = finalAssignment;
+    }
+
+    public FinalAssignment getFinalAssignment() {
+        return finalAssignment;
+    }
+
+    public void setFinalAssignment(FinalAssignment finalAssignment) {
+        this.finalAssignment = finalAssignment;
+    }
+
+    public List<Lab> getLabs() {
+        return labs;
+    }
+
+    public void setLabs(List<Lab> labs) {
+        this.labs = labs;
     }
 }
