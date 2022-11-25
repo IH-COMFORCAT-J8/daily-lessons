@@ -22,7 +22,7 @@ public class Account {
     - ¿Cómo se relaciona account con User?
     - Si te vas al atributo account en la clase user, verás la relación
      */
-    @OneToMany(mappedBy = "account")
+    @OneToMany(mappedBy = "account", fetch = FetchType.EAGER)
     private List<User> users = new ArrayList<>();
 
     public Account(String email, String password, Plan plan) {
@@ -72,4 +72,6 @@ public class Account {
     public void setUsers(List<User> users) {
         this.users = users;
     }
+
+
 }
