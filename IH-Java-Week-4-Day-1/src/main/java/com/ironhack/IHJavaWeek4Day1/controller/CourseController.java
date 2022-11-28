@@ -9,14 +9,15 @@ import java.util.*;
 @RestController
 public class CourseController {
 
+    //Tipo de petición y endpoint
+    //GET, POST, PUT, PATCH
+    //Endpoint = Ruta Relativa
     @GetMapping("/courses")
+    //Código de respuesta en caso de que se haya procesado con éxito la petición
     @ResponseStatus(HttpStatus.OK)
     List<Course> getCourses() {
-        List<Course> courses = new ArrayList<>();
-        courses.add(new Course("CS101", "Intro to java"));
-        courses.add(new Course("CS103", "Intro to Spring"));
 
-        return courses;
+        return null;
 
     }
 
