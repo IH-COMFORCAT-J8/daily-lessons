@@ -27,6 +27,7 @@ public class NetflixApplication implements CommandLineRunner {
 		Plan plan = planRepository.save(new Plan(in, 25.0));
 		printStrings("Hola", "Qué", "Tal");
 
+
 	}
 
 	public void printStrings(String... strings) {
