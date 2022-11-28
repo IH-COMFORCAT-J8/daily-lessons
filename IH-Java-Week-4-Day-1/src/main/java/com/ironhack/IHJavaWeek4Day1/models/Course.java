@@ -1,6 +1,10 @@
 package com.ironhack.IHJavaWeek4Day1.models;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Course {
+    @Id
     private String courseCode;
     private String courseName;
 

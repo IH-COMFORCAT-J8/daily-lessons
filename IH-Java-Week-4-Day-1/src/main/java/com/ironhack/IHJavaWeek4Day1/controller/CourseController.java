@@ -1,6 +1,8 @@
 package com.ironhack.IHJavaWeek4Day1.controller;
 
 import com.ironhack.IHJavaWeek4Day1.models.*;
+import com.ironhack.IHJavaWeek4Day1.repositories.*;
+import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,6 +10,9 @@ import java.util.*;
 
 @RestController
 public class CourseController {
+
+    @Autowired
+    CourseRepository courseRepository;
 
     //Tipo de petición y endpoint
     //GET, POST, PUT, PATCH
@@ -17,7 +22,7 @@ public class CourseController {
     @ResponseStatus(HttpStatus.OK)
     List<Course> getCourses() {
 
-        return null;
+        return courseRepository.findAll();
 
     }
 
