@@ -3,10 +3,13 @@ package com.ironhack.IHJavaWeek4Day1.models;
 import com.ironhack.IHJavaWeek4Day1.enums.*;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import org.hibernate.annotations.*;
 
 import java.math.*;
 
 @Entity
+//Utilizamos Dynamic update para actualizar una sola celda, en lugar de todas las celdas de un elemento
+@DynamicUpdate
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

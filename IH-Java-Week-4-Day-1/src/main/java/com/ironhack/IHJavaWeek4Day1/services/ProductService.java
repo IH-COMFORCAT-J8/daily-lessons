@@ -7,10 +7,11 @@ import com.ironhack.IHJavaWeek4Day1.repositories.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
+import java.math.*;
 import java.util.*;
 
 @Service
-public class ProductService  {
+public class ProductService {
 
     @Autowired
     ProductRepository productRepository;
@@ -49,6 +50,23 @@ public class ProductService  {
 
     public Product addProduct(Product product) {
 
+        return productRepository.save(product);
+    }
+
+    public Product update(Long id, Product product) {
+        //Recibimos el id por url y el producto por json
+        //Si el id existe en la base de datos, asignamos el id al producto que hemos recibido y lo guardamos en la base de datos
+        if (productRepository.findById(id).isPresent()) {
+            product.setId(id);
+            return productRepository.save(product);
+        }
+
+        return null;
+    }
+
+    public Product updatePrice(Long id, BigDecimal price) {
+        Product product = productRepository.findById(id).get();
+        product.setPrice(price);
         return productRepository.save(product);
     }
 }

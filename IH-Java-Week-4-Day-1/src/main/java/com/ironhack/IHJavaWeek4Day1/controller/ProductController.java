@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.*;
 import java.util.*;
 
 @RestController
@@ -65,5 +66,17 @@ public class ProductController implements ProductControllerInt {
     @ResponseStatus(HttpStatus.CREATED)
     public Product addProduct(@RequestBody Product product) {
         return productService.addProduct(product);
+    }
+
+    @PutMapping("/id/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public Product updateProduct(@PathVariable Long id, @RequestBody Product product) {
+        return productService.update(id, product);
+    }
+
+    @PatchMapping("/id/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Product updatePrice(@PathVariable Long id, @RequestParam BigDecimal price) {
+        return productService.updatePrice(id, price);
     }
 }
