@@ -79,4 +79,9 @@ public class ProductController implements ProductControllerInt {
     public Product updatePrice(@PathVariable Long id, @RequestParam BigDecimal price) {
         return productService.updatePrice(id, price);
     }
+    @DeleteMapping("/id/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteById(@PathVariable Long id) {
+        productService.delete(id);
+    }
 }
