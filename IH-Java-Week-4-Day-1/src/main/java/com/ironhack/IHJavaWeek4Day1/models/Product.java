@@ -2,20 +2,27 @@ package com.ironhack.IHJavaWeek4Day1.models;
 
 import com.ironhack.IHJavaWeek4Day1.enums.*;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
+
+import java.math.*;
 
 @Entity
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotEmpty
     private String name;
-    private Double price;
+    //Limitamos el número máximo de enteros y fracciones
+
+    @Digits(integer = 4, fraction = 2)
+    private BigDecimal price;
     @Enumerated(EnumType.STRING)
     private Category category;
     @Enumerated(EnumType.STRING)
     private Department department;
 
-    public Product(String name, Double price, Category category, Department department) {
+    public Product(String name, BigDecimal price, Category category, Department department) {
         this.name = name;
         this.price = price;
         this.category = category;
@@ -41,11 +48,11 @@ public class Product {
         this.name = name;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

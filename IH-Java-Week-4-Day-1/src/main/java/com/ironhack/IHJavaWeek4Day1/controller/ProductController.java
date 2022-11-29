@@ -4,6 +4,7 @@ import com.ironhack.IHJavaWeek4Day1.controller.interfaces.*;
 import com.ironhack.IHJavaWeek4Day1.enums.*;
 import com.ironhack.IHJavaWeek4Day1.models.*;
 import com.ironhack.IHJavaWeek4Day1.repositories.*;
+import com.ironhack.IHJavaWeek4Day1.services.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
@@ -15,27 +16,29 @@ import java.util.*;
 public class ProductController implements ProductControllerInt {
 
     @Autowired
-    ProductRepository productRepository;
+    ProductService productService;
 
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
     public List<Product> findAllProducts() {
-        return productRepository.findAll();
+        return productService.findAllProducts();
     }
 
     // localhost:8080/products/id/?id=
     // localhost:8080/products/id/1
 
     @GetMapping("/id/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public Product findProductById(@PathVariable Long id) {
-        return productRepository.findById(id).get();
+
+       return productService.findProductById(id);
     }
 
     // localhost:8081/department?department=Clo
     @GetMapping("/department")
     public List<Product> findProductsByDepartment(@RequestParam String department) {
-        return productRepository.findByDepartment(Department.valueOf(department.toUpperCase()));
+        return productService.findProductsByDepartment(department);
     }
 
     /*
@@ -52,19 +55,13 @@ public class ProductController implements ProductControllerInt {
     @GetMapping("/filter")
     @ResponseStatus(HttpStatus.OK)
     public List<Product> findByCategoryAndDepartment(@RequestParam Optional<String> category, @RequestParam Optional<String> department) {
-        if (category.isPresent() && department.isPresent()) {
-            return productRepository.findByCategoryAndDepartment(Category.valueOf(category.get().toUpperCase()), Department.valueOf(department.get().toUpperCase()));
-        }
 
-        if (category.isPresent()) {
-            return productRepository.findByCategory(Category.valueOf(category.get().toUpperCase()));
-        }
+        return productService.findByCategoryAndDepartment(category, department);
+    }
 
-        if (department.isPresent()) {
-            return productRepository.findByDepartment(Department.valueOf(department.get().toUpperCase()));
-
-        }
-
-        return productRepository.findAll();
+    @PostMapping("/add")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Product addProduct(@RequestBody Product product) {
+        return productService.addProduct(product);
     }
 }
