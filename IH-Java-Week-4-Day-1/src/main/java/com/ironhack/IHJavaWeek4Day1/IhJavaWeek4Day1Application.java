@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.*;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.math.*;
 import java.util.*;
 
 @SpringBootApplication
@@ -24,11 +25,11 @@ public class IhJavaWeek4Day1Application implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         productRepository.saveAll(List.of(
-                new Product("Pokemon", 49.0, Category.COMMERCIAL_NEW, Department.ELECTRONICS),
-                new Product("Pooka Shell Bracelet", 7.50, Category.HANDMADE, Department.JEWELRY),
-                new Product("Commodore 64", 225.00, Category.COMMERCIAL_USED, Department.ELECTRONICS),
-                new Product("Baby Blue Tuxedo", 65.25, Category.COMMERCIAL_USED, Department.CLOTHING),
-                new Product("Rectangular Persian Rug", 7500.00, Category.HANDMADE, Department.HOMEGOODS)
+                new Product("Pokemon", new BigDecimal("49.01"), Category.COMMERCIAL_NEW, Department.ELECTRONICS),
+                new Product("Pooka Shell Bracelet", new BigDecimal("49.10"), Category.HANDMADE, Department.JEWELRY),
+                new Product("Commodore 64", new BigDecimal("429.20"), Category.COMMERCIAL_USED, Department.ELECTRONICS),
+                new Product("Baby Blue Tuxedo", new BigDecimal("149.20"), Category.COMMERCIAL_USED, Department.CLOTHING),
+                new Product("Rectangular Persian Rug", new BigDecimal("800.90"), Category.HANDMADE, Department.HOMEGOODS)
 
         ));
 

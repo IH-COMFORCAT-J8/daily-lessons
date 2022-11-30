@@ -12,6 +12,9 @@ public interface ProductControllerInt {
     List<Product> findProductsByDepartment(String department);
     List<Product> findByCategoryAndDepartment(Optional<String> category, Optional<String> department);
 
+    Product addProduct(Product product);
+
+
 
 
 }
