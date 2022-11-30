@@ -49,6 +49,21 @@ public class PatientController {
         return patientRepository.findByAdmittedByStatus(status);
     }
 
+    @PostMapping("/create-patient")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Patient createPatient(@RequestBody Patient patient){
+        return patientRepository.save(patient);
+    }
+
+    @PutMapping("/update-patient")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public Patient updatePatient(@RequestBody Patient patient){
+        if(patientRepository.findById(patient.getId()).isPresent()){
+            return patientRepository.save(patient);
+        }
+        return null;
+    }
+
 
 
 }
