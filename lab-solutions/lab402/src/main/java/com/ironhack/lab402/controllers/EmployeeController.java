@@ -41,4 +41,34 @@ public class EmployeeController {
     public List<Employee> findEmployeesByDepartment(@RequestParam String department){
         return employeeRepository.findByDepartment(department);
     }
+
+    @PostMapping("/create-doctor")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Employee createEmpoloyee(@RequestBody Employee employee){
+        return employeeRepository.save(employee);
+    }
+
+    @PatchMapping("/doctor-status/{id}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public Employee updateStatus(@PathVariable Long id, @RequestParam Status status){
+        if(employeeRepository.findById(id).isPresent()){
+            Employee employee = employeeRepository.findById(id).get();
+            employee.setStatus(status);
+            return employeeRepository.save(employee);
+        }
+        return null;
+    }
+
+    @PatchMapping("/doctor-department/{id}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public Employee updateDepartment(@PathVariable Long id, @RequestParam String department){
+        if(employeeRepository.findById(id).isPresent()){
+            Employee employee = employeeRepository.findById(id).get();
+            employee.setDepartment(department);
+            return employeeRepository.save(employee);
+        }
+        return null;
+    }
+
+
 }
