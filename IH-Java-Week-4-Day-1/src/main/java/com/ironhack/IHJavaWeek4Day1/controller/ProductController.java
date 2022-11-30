@@ -1,6 +1,7 @@
 package com.ironhack.IHJavaWeek4Day1.controller;
 
 import com.ironhack.IHJavaWeek4Day1.controller.interfaces.*;
+import com.ironhack.IHJavaWeek4Day1.dtos.*;
 import com.ironhack.IHJavaWeek4Day1.enums.*;
 import com.ironhack.IHJavaWeek4Day1.models.*;
 import com.ironhack.IHJavaWeek4Day1.repositories.*;
@@ -19,13 +20,27 @@ public class ProductController implements ProductControllerInt {
     @Autowired
     ProductService productService;
 
+    @PostMapping("/add-seller")
+    public Seller addNewSeller(@RequestBody Seller seller) {
+        return productService.addSeller(seller);
+    }
 
+    @PatchMapping("/update-seller")
+    public Product updateSeller(@RequestBody UpdateSellerDTO updateSellerDTO) {
+        return productService.updateSeller(updateSellerDTO);
+    }
 
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
     public List<Product> findAllProducts() {
         return productService.findAllProducts();
+    }
+
+    @GetMapping("/all/price-only")
+    @ResponseStatus(HttpStatus.OK)
+    public List<NameAndPriceDTO> findAllProductsNameAndPrice() {
+        return productService.findALlNameAndPrice();
     }
 
     // localhost:8080/products/id/?id=

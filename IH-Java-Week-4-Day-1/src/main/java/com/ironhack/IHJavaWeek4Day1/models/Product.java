@@ -24,15 +24,26 @@ public class Product {
     private Category category;
     @Enumerated(EnumType.STRING)
     private Department department;
+    @ManyToOne
+    private Seller seller;
 
-    public Product(String name, BigDecimal price, Category category, Department department) {
+    public Product(String name, BigDecimal price, Category category, Department department, Seller seller) {
         this.name = name;
         this.price = price;
         this.category = category;
         this.department = department;
+        this.seller = seller;
     }
 
     public Product() {
+    }
+
+    public Seller getSeller() {
+        return seller;
+    }
+
+    public void setSeller(Seller seller) {
+        this.seller = seller;
     }
 
     public Long getId() {

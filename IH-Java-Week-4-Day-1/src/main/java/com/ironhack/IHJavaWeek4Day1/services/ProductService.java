@@ -1,11 +1,14 @@
 package com.ironhack.IHJavaWeek4Day1.services;
 
 import com.ironhack.IHJavaWeek4Day1.controller.interfaces.*;
+import com.ironhack.IHJavaWeek4Day1.dtos.*;
 import com.ironhack.IHJavaWeek4Day1.enums.*;
 import com.ironhack.IHJavaWeek4Day1.models.*;
 import com.ironhack.IHJavaWeek4Day1.repositories.*;
 import org.springframework.beans.factory.annotation.*;
+import org.springframework.http.*;
 import org.springframework.stereotype.*;
+import org.springframework.web.server.*;
 
 import java.math.*;
 import java.util.*;
@@ -15,6 +18,9 @@ public class ProductService {
 
     @Autowired
     ProductRepository productRepository;
+
+    @Autowired
+    SellerRepository sellerRepository;
 
 
     public List<Product> findAllProducts() {
@@ -60,13 +66,45 @@ public class ProductService {
             product.setId(id);
             return productRepository.save(product);
         }
-
-        return null;
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "El id especificado no se encuentra en la base de datos");
     }
 
     public Product updatePrice(Long id, BigDecimal price) {
         Product product = productRepository.findById(id).get();
         product.setPrice(price);
         return productRepository.save(product);
+    }
+
+    public List<NameAndPriceDTO> findALlNameAndPrice() {
+        List<Product> products = productRepository.findAll();
+        List<NameAndPriceDTO> dtos = new ArrayList<>();
+
+        for (Product product : products) {
+            dtos.add(new NameAndPriceDTO(product.getName(), product.getPrice()));
+        }
+        /*
+        1. NameAndPriceDTO(Nombre del producto 1, Precio del producto 1)
+
+         */
+        return dtos;
+
+    }
+
+    public Product updateSeller(UpdateSellerDTO updateSellerDTO) {
+
+            Product product =
+                    productRepository.findById(updateSellerDTO.getProductId()).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "El producto no se encuentra en la base de datos"));
+            Seller seller = sellerRepository.findById(updateSellerDTO.getNewSellerId()).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "El seller no se encuentra en la base de datos"));
+
+            product.setSeller(seller);
+
+            return productRepository.save(product);
+
+    }
+
+    public Seller addSeller(Seller seller) {
+        System.err.println(seller.getName());
+        System.err.println(seller.getAddress());
+        return sellerRepository.save(seller);
     }
 }
