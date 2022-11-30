@@ -21,6 +21,7 @@ public class ProductController implements ProductControllerInt {
     ProductService productService;
 
     @PostMapping("/add-seller")
+    @ResponseStatus(HttpStatus.CREATED)
     public Seller addNewSeller(@RequestBody Seller seller) {
         return productService.addSeller(seller);
     }

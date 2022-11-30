@@ -103,8 +103,7 @@ public class ProductService {
     }
 
     public Seller addSeller(Seller seller) {
-        System.err.println(seller.getName());
-        System.err.println(seller.getAddress());
+
         return sellerRepository.save(seller);
     }
 }

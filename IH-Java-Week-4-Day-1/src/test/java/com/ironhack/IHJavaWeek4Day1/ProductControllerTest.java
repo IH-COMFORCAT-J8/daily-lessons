@@ -56,8 +56,14 @@ public class ProductControllerTest {
         Método contentType: define el tipo de contenido APPLICATION_JSON
         Método andExpect: Espera un determinado response status
         Método return: finaliza la llamada
+
+        // {
+        //    "name": "Jaume",
+        //    "address": "Ejemplo"
+        //}
+
          */
-        MvcResult result = mockMvc.perform(post("/products/add-seller").content(body).contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk()).andReturn();
+        MvcResult result = mockMvc.perform(post("/products/add-seller").content(body).contentType(MediaType.APPLICATION_JSON)).andExpect(status().isCreated()).andReturn();
 
         assertTrue(result.getResponse().getContentAsString().contains("Jaume"));
     }
