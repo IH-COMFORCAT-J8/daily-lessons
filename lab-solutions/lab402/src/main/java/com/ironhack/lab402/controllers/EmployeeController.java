@@ -6,6 +6,7 @@ import com.ironhack.lab402.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -24,10 +25,9 @@ public class EmployeeController {
     @GetMapping("/employees/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Employee findEmployeeById(@PathVariable Long id){
-        if(employeeRepository.findById(id).isPresent()){
-            return employeeRepository.findById(id).get();
-        }
-        return null;
+
+        return employeeRepository.findById(id)
+                .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND, "The user does not exist"));
     }
 
     @GetMapping("/employees-status")
@@ -51,12 +51,13 @@ public class EmployeeController {
     @PatchMapping("/doctor-status/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Employee updateStatus(@PathVariable Long id, @RequestParam Status status){
-        if(employeeRepository.findById(id).isPresent()){
-            Employee employee = employeeRepository.findById(id).get();
-            employee.setStatus(status);
-            return employeeRepository.save(employee);
-        }
-        return null;
+
+        Employee employee = employeeRepository.findById(id)
+                .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND, "Employee not found"));
+        employee.setStatus(status);
+        return employeeRepository.save(employee);
+
+
     }
 
     @PatchMapping("/doctor-department/{id}")
@@ -69,6 +70,8 @@ public class EmployeeController {
         }
         return null;
     }
+
+
 
 
 }

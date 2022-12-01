@@ -6,6 +6,7 @@ import com.ironhack.lab402.repositories.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -61,7 +62,7 @@ public class PatientController {
         if(patientRepository.findById(patient.getId()).isPresent()){
             return patientRepository.save(patient);
         }
-        return null;
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "The patient does not exist");
     }
 
 
