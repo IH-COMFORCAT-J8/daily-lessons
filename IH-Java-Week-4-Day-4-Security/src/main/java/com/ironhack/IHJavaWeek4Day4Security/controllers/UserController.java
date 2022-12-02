@@ -57,7 +57,7 @@ public class UserController {
 
 
     @GetMapping("/user-details")
-    public User getUserDetails(@AuthenticationPrincipal UserDetails userDetails) {
+    public User getUserDetails(@AuthenticationPrincipal UserDetails userDetails, @PathVariable(name = "id") Long id) {
         return userRepository.findByUsername(userDetails.getUsername()).get();
     }
 
