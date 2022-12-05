@@ -17,3 +17,6 @@
 | 25 noviembre        | Repaso                               | https://ironhack.zoom.us/rec/share/XxWOrMwHYDvTWwEKk3nUUWbLuWcuT5nWy47IktMRauTVYuaBifs5hvL4hX09f2a5.y7pGa2aGoJQB2svO |
 | 28 noviembre        | Rutas get                            | https://ironhack.zoom.us/rec/share/0emQTxqVcPoOsup-nJPBBGKo0TAbOp_-WUz4RGxAwn8QicHWSNATcCT_qQDIjXsV.2ySdpWjc4HKA9Can |
 | 29 noviembre        | POST rutas                           | https://ironhack.zoom.us/rec/share/Uulxz2RKukkuPMK8c1xQnsaR59emFLdm3H2QQvM6hKjHpQZhzWWKQi59l5ZLZkaR.Mc-324ONYz2dMw-U |
+| 30 noviembre        | Testing y excepciones                | https://ironhack.zoom.us/rec/share/DYFAn4GSrgKFnOuWD7oqrXafl_bdbvkCu6LSdCCXWPYZng6xxEM4YcnEccMlAmTE.wz3N12ZrK9XJ2xtM |
+| 1 diciembre         | Seguridad                            | https://ironhack.zoom.us/rec/share/hkRAQPuZchMBdO9VSCUPFrg3XFoYcgjBmKrQzUNn3uvptT5Dq1kTTsO6XaKxbSHf.v0kYUJWjzGCFWDcc |
+| 2 diciembre         | Repaso                               | https://ironhack.zoom.us/rec/share/NcjOmOJNskms_hFk-KtF-4Srl3cv546Zz0LLNOVC9OOiLuISa2JqK8bN3gRD0m4.7wnGi9Du6a8M4GDH |
