@@ -1,0 +1,13 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    background-color: aquamarine;
+}
+li {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
