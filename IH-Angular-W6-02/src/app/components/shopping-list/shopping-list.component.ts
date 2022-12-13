@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingItem } from 'src/app/models/shopping-item';
 
 @Component({
   selector: 'app-shopping-list',
@@ -7,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingListComponent implements OnInit {
 
-  shoppingItems : string[]
+  shoppingItems : ShoppingItem[]
   item: string = ''
+  quantity: number
 
   constructor() {
 
-    this.shoppingItems = ['Milk', 'Sugar', 'Cocoa']
+    this.shoppingItems = [new ShoppingItem('Leche', 2)]
+    this.quantity = 1
 
    }
 
@@ -20,7 +23,8 @@ export class ShoppingListComponent implements OnInit {
   }
 
   addItem() {
-    this.shoppingItems.push(this.item)
+    if(this.item === '') return
+    this.shoppingItems.push(new ShoppingItem(this.item, this.quantity))
     this.item = ''
   }
 
