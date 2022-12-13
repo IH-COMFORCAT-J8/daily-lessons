@@ -1,6 +1,8 @@
-<div class="header">
-    <div class="title-box">
-        <h1>Bienvenidos a mi web</h1>
-        <h2>Introducción a Angular</h2>
-    </div>
-</div>
+<h1>Welcome to {{storeName}}</h1>
+<p>Current date: {{formattedDate}}</p>
+
+<input [placeholder]='inputPlaceholder'>
+<button (click)="disableBtn($event)" name="submit-btn" [disabled]="isDisabledSubmit"> Submit</button>
+<button (click)="disableBtn($event)" name="other-btn" [disabled]="isDisabledOther"> Other</button>
+
+<p (copy)="onCopy()">Copy me to enable the buttons </p>
