@@ -20,3 +20,4 @@
 | 30 noviembre        | Testing y excepciones                | https://ironhack.zoom.us/rec/share/DYFAn4GSrgKFnOuWD7oqrXafl_bdbvkCu6LSdCCXWPYZng6xxEM4YcnEccMlAmTE.wz3N12ZrK9XJ2xtM |
 | 1 diciembre         | Seguridad                            | https://ironhack.zoom.us/rec/share/hkRAQPuZchMBdO9VSCUPFrg3XFoYcgjBmKrQzUNn3uvptT5Dq1kTTsO6XaKxbSHf.v0kYUJWjzGCFWDcc |
 | 2 diciembre         | Repaso                               | https://ironhack.zoom.us/rec/share/NcjOmOJNskms_hFk-KtF-4Srl3cv546Zz0LLNOVC9OOiLuISa2JqK8bN3gRD0m4.7wnGi9Du6a8M4GDH |
+| 12 Diciembre        | Intro a Angular                      | https://ironhack.zoom.us/rec/share/GayyZ4zxjd0f2t6tHpOuP5ifMEYiI68pqjQyF16QMibueOTi_WRcdyWu0IX1agyW.VTYFeqkaz3cP3HCc |
