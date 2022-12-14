@@ -1,0 +1,9 @@
+
+<div [ngClass]="{odd : index % 2 === 0}">
+    <img class="profile-pic" [src]="fan.profilePicture" alt="">
+    <h3>{{fan.name}}</h3>
+    <p>{{fan.age}}</p>
+    <p>{{fan.country}}</p>
+    <button (click)="changeTeam()">Change Team</button>
+    <button (click)="deleteFan()">Delete Fan</button>
+</div>

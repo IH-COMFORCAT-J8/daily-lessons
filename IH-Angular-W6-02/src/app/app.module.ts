@@ -8,6 +8,8 @@ import { MainComponent } from './components/main/main.component';
 import { TextEditorComponent } from './components/text-editor/text-editor.component';
 import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { FanListComponent } from './components/fan-list/fan-list.component';
+import { FanCardComponent } from './components/fan-card/fan-card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { MenuComponent } from './components/menu/menu.component';
     MainComponent,
     TextEditorComponent,
     ShoppingListComponent,
-    MenuComponent
+    MenuComponent,
+    FanListComponent,
+    FanCardComponent
   ],
   imports: [
     BrowserModule,

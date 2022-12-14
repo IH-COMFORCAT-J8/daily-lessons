@@ -1,0 +1,46 @@
+<h1>Fan Database</h1>
+<input type="text" [(ngModel)]="fanName" placeholder="Fan name">
+<input type="number" [(ngModel)]="fanAge" placeholder="Fan age">
+<input type="text" [(ngModel)]="fanCountry" placeholder="Fan Country">
+<select name="team" [(ngModel)]="fanTeam">
+    <option value="morocco">Morocco</option>
+    <option value="france">France</option>
+</select>
+<button (click)="addFan()">Add Fan</button>
+
+<div class="fans-wrapper">
+    <div class="fan">
+        <h2>Morocco Fans</h2>
+        <app-fan-card
+         *ngFor="let moroccoFan of moroccoFans; let i = index" 
+        [fan]="moroccoFan" 
+        [index]="i"
+        (fanChanged)="changeTeam($event, 'morocco')"
+        (fanDeleted)="deleteFan($event, 'morocco')"
+        >
+    
+    </app-fan-card>
+     
+
+    </div>
+    <div class="fan">
+        <h2>France Fans</h2>
+        <app-fan-card *ngFor="let franceFan of franceFans; let i = index" 
+        [fan]="franceFan" [index]="i"
+                (fanChanged)="changeTeam($event, 'france')"
+        (fanDeleted)="deleteFan($event, 'france')"
+        ></app-fan-card>
+        
+        <!-- 
+            
+            <div *ngFor="let franceFan of franceFans; let i = index" [ngClass]="{odd : i % 2 == 0}">
+                <img class="profile-pic" [src]="franceFan.profilePicture" alt="">
+                <h3>{{franceFan.name}}</h3>
+                <p>{{franceFan.age}}</p>
+                <p>{{franceFan.country}}</p>
+            </div>
+            
+        -->
+    </div>
+
+</div>
