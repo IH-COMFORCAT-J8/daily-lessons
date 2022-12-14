@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Fan } from 'src/app/models/fan';
+import { RandomUserService } from 'src/app/services/random-user.service';
 
 @Component({
   selector: 'app-fan-list',
@@ -21,7 +22,7 @@ export class FanListComponent implements OnInit {
   moroccoFans: Fan[] = []
 
 
-  constructor() {
+  constructor(private randomUserService: RandomUserService) { 
 
     this.moroccoFans.push(new Fan('Mohamed', 20, 'Morocco', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png'))
     this.moroccoFans.push(new Fan('Ahmed', 20, 'Morocco', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png'))
@@ -54,6 +55,27 @@ export class FanListComponent implements OnInit {
       this.franceFans.splice(index, 1)
     }
 
+
+  }
+
+  addRandomFan(): void {
+    // Con subscribe esperamos de manera asíncrona la llamada a la api
+    this.randomUserService.getRandomUser().subscribe(response => {
+      
+      let randomFan = response.results[0]
+      let username = randomFan.name.first + " " + response.results[0].name.last
+      let age = randomFan.dob.age
+      let country = randomFan.location.country
+      let profilePicture = randomFan.picture.medium
+      let newRandomFan = new Fan(username, age, country, profilePicture) 
+
+      if(this.fanTeam == 'france') {
+        this.franceFans.push(newRandomFan)
+      } else {
+        this.moroccoFans.push(newRandomFan)
+      }
+      
+    })
 
   }
 
