@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -11,6 +11,7 @@ import { ShoppingListComponent } from './components/shopping-list/shopping-list.
 import { MenuComponent } from './components/menu/menu.component';
 import { FanListComponent } from './components/fan-list/fan-list.component';
 import { FanCardComponent } from './components/fan-card/fan-card.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,15 @@ import { FanCardComponent } from './components/fan-card/fan-card.component';
     ShoppingListComponent,
     MenuComponent,
     FanListComponent,
-    FanCardComponent
+    FanCardComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
