@@ -1,0 +1,3 @@
+Employee{name='Jaume', surname='Sánchez', dateOfBirth='13/01/1989', department='IT', salary=50000.0}
+Intern{name='Alejandro', surname='Apellido', dateOfBirth='20/10/1984', department='IT', salary=15000.0'internshipDuration=12}
+Intern{name='Jose', surname='Apellido', dateOfBirth='20/10/1995', department='IT', salary=20000.0'internshipDuration=12}

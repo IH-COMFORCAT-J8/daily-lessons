@@ -7,7 +7,7 @@ import java.util.*;
 
 @Entity
 @Table(name = "users")
-public class User {
+public  class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,6 +18,13 @@ public class User {
     @ManyToOne
     @JoinColumn(name = "account_id")
     private Account account;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_media",
+    joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "media_id")
+    )
+    private List<Media> favoriteMedia = new ArrayList<>();
 
     public User(String name, Status status, String profilePicture, Account account) {
         this.name = name;
@@ -67,5 +74,17 @@ public class User {
 
     public void setAccount(Account account) {
         this.account = account;
+    }
+
+    public List<Media> getFavoriteMedia() {
+        return favoriteMedia;
+    }
+
+    public void setFavoriteMedia(List<Media> favoriteMedia) {
+        this.favoriteMedia = favoriteMedia;
+    }
+
+    public void addFavoriteMedia(Media media) {
+        this.favoriteMedia.add(media);
     }
 }

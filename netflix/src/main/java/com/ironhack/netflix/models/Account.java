@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.util.*;
 
 @Entity
-public class Account {
+public class emailAccount {
 
     @Id
     private String email;

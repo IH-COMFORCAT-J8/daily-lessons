@@ -1,0 +1,12 @@
+
+<div [ngStyle]="{'background-color': backgroundColor}">
+
+    <h1>{{storeName}}</h1>
+    <h2>{{formattedDate}}</h2>
+    <input type="text" [placeholder]="inputPlaceHolder" [(ngModel)]="name" (keyup)="enableButton()">
+    <p *ngIf="name.length < 4">El nombre debe tener más de 4 caracteres</p>
+    <button (click)="showWelcomeMessage()" [disabled]="isDisabled">Enviar</button>
+    <p (copy)="enableOrDisableButton()">Cópiame para habilitar o deshabilitar el botón!</p>
+    <h2>{{name}}</h2>
+    
+</div>

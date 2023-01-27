@@ -1,0 +1,46 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+
+        <div>
+            <div><label>Full name</label></div>
+            <input type="text" formControlName="name">
+            <p *ngIf="!registerForm.get('name')?.valid && registerForm.get('name')!.touched">The name is required</p>
+        </div>
+
+        <div>
+            <div><label>E-mail</label></div>
+            <input type="text" formControlName="email">
+            <p *ngIf="registerForm.get('email')?.hasError('required') && registerForm.get('email')!.touched">The e-mail is required</p>
+            <p *ngIf="registerForm.get('email')?.hasError('email') && registerForm.get('email')!.touched">You must provide a valid e-mail</p>
+        </div>
+
+
+        <div>
+            <div><label>Age</label></div>
+            <input type="number" formControlName="age">
+            <p *ngIf="registerForm.get('age')?.hasError('required') && registerForm.get('age')!.touched">The age is required</p>
+            <p *ngIf="registerForm.get('age')?.hasError('min') && registerForm.get('age')!.touched">The minimum valid age is 0</p>
+            <p *ngIf="registerForm.get('age')?.hasError('max') && registerForm.get('age')!.touched">The maximum valid age is 150</p>
+        </div>
+
+        <div>
+            <div><label>Gender</label></div>
+            <div *ngFor="let gender of genders">
+                <label><input [value]="gender" type="radio" formControlName="gender">{{gender}}</label>
+                <p *ngIf="!registerForm.get('gender')?.valid && registerForm.get('gender')!.touched">The gender is
+                    required</p>
+            </div>
+        </div>
+        <div>
+            <div><label>Career</label></div>
+            <div *ngFor="let career of careers">
+                <label><input [value]="career" type="radio" formControlName="career">{{career}}</label>
+                <p *ngIf="!registerForm.get('career')?.valid && registerForm.get('career')!.touched">The name is
+                    required</p>
+            </div>
+        </div>
+
+        <button [disabled]="!registerForm.valid" type="submit">Submit</button>
+
+    </form>
+</div>

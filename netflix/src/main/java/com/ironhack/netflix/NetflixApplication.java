@@ -21,11 +21,14 @@ public class NetflixApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		/*
+
 		System.out.println("Hola Clase!");
 		System.out.println("Introduce el nombre del plan");
 		String in = input.nextLine();
 		Plan plan = planRepository.save(new Plan(in, 25.0));
 		printStrings("Hola", "Qué", "Tal");
+		 */
 
 
 	}

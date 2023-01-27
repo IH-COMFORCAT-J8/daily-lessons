@@ -1,0 +1,6 @@
+<input type="text" [(ngModel)]="textInput">
+<button (click)="increaseSize()">Increase Size</button>
+<button (click)="decreaseSize()">Decrease Size</button>
+<p [ngStyle]="{'font-size.px': fontSize}" >{{textInput}}</p>
+<p *ngIf="fontSize > 30">El texto es demasiado grande</p>
+<p *ngIf="textInput.length > 7">El texto es demasiado largo</p>

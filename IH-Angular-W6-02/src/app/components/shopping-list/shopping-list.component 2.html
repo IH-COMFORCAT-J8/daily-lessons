@@ -1,0 +1,12 @@
+
+<h1>Shopping List</h1>
+<input type="text" (keydown.enter)="addItem()" [(ngModel)]="item">
+<input type="number" [(ngModel)]="quantity">
+<button [disabled]="item.length <= 0"  (click)="addItem()" >Añadir</button>
+
+
+<div [ngClass]="getClass(i)" *ngFor="let item of shoppingItems; let i = index">
+    <p>Item number{{i}}</p>
+    <h3>{{item.name}}</h3>
+    <button (click)="delete(i)">Borrar</button>
+</div>
